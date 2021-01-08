@@ -4,8 +4,8 @@
 # Created on: January 2021
 # This program formats your address appropriately
 
-def formatter(address, apt_number, street_number, street_name, city,
-             province, postal_code):
+def formatter(address, street_number, street_name, city,
+             province, postal_code, apt_number = None):
     # This function formats your address appropriately
 
     if apt_number is not None:
@@ -41,9 +41,9 @@ def main():
     postal_code_input = input("Postal code: ")
     print("")
 
-    final_product = formatter(address_input, apt_number_input,
-                             street_number_input, street_name_input,
-                             city_input, province_input, postal_code_input)
+    final_product = formatter(address_input, street_number_input,
+                             street_name_input, city_input, province_input,
+                             postal_code_input, apt_number_input)
 
     print(final_product)
 
